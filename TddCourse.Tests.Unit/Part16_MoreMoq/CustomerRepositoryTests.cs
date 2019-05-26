@@ -14,7 +14,7 @@ namespace TddCourse.Tests.Unit.Part16_MoreMoq
 
             var customerRepository = new CustomerRepository(customerValidatorMock);
 
-            customerRepository.Add(It.IsAny<ICustomer>());
+            customerRepository.Add(Mock.Of<ICustomer>());
 
             customerRepository.AllCustomers.Should().BeEmpty();
         }
